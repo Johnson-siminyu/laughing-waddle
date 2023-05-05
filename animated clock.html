@@ -1,0 +1,74 @@
+<DOCTYPE html>
+    <html>
+    <head>
+        <title>Html css clock</title>
+        <style type="text/css">
+            body{
+                background:radial-gradient(rgba(255,200,0,1),black);
+                text-align:centered;
+            }
+            .clock{
+                width:500px;
+                height:500px;
+                background:radial-gradient(lightblue,linen);
+                display:inline-block;
+                border-radius:50%;
+                border:50px solid black;
+                padding:20px;
+            }
+            .sec,.min,.hour{
+                border-radius=10px;
+                line-height:45px;
+                color: white;
+                position:relative;
+                transform-origin:bottom;
+            }
+            .sec{
+                height:250px;
+                width:10px;
+                background:radial-gradient(black,red) ;
+                left: 245px;
+                z-index:3;
+                transform-origin:bottom;
+                animation:sec-anim 10s linear infinite;
+            }
+            .min{
+                height:250px;
+                width:15px;
+                background:radial-gradient(black,blue) ;
+                left: 242.5px;
+                top:-250px;
+                z-index:2;
+                animation:min-anim 15s linear infinite;
+            }
+            .hour{
+                height:180px;
+                width:20px;
+                background:radial-gradient(black,seagreen) ;
+                left: 240px;
+                top:-430px ;
+                z-index:1;
+                animation:hour-anim 20s linear infinite;
+            }
+           @keyframes sec-anim{
+            from{transform:rotatez(0deg);}
+            to{transform:rotatez(360deg);}
+           }
+            @keyframes min-anim{
+            from{transform:rotatez(0deg);}
+            to{transform:rotatez(360deg);}
+            }
+            @keyframes hour-anim{
+            from{transform:rotatez(0deg);}
+            to{transform:rotatez(360deg);}
+            }
+        </style>
+    </head>
+    <body>
+     <div class="clock">
+        <div class="sec">S</div>
+        <div class="min">M</div>
+        <div class="hour">H</div>
+        </div>  
+    </body>
+</html>
